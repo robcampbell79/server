@@ -16,7 +16,7 @@ type Dracula []Vampire
 
 func returnVampire(w http.ResponseWriter, r *http.Request) {
   dracula := Dracula{
-    Vampire{Name: "Vlad Tepes", Country: "Romaina", Died: "December 1476"},
+    Vampire{Name: "Vlad Tepes", Country: "Romania", Died: "December 1476"},
   }
 
   fmt.Println("Endpoint Hit: returnVampire")
