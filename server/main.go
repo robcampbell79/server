@@ -12,16 +12,18 @@ type Vampire struct {
   Died string `json:"Died"`
 }
 
-type Dracula []Vampire
+type Vampires []Vampire
 
 func returnVampire(w http.ResponseWriter, r *http.Request) {
-  dracula := Dracula{
+  vampire := Vampires{
     Vampire{Name: "Vlad Tepes", Country: "Romania", Died: "December 1476"},
+    Vampire{Name: "Elizabeth Bathory", Country: "Hungary", Died: "August 1614"},
   }
 
   fmt.Println("Endpoint Hit: returnVampire")
+  fmt.Println(vampire)
 
-  json.NewEncoder(w).Encode(dracula)
+  json.NewEncoder(w).Encode(vampire)
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
